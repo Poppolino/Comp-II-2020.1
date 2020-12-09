@@ -7,10 +7,10 @@ public class Principal{
 	    float media, maiorMedia=-1, total=0; 
 	    
 	    Scanner leitura = new Scanner(System.in);
-	    leitura.useLocale(Locale.US);            //Definindo o padrão de casa decimal como americano para ler com '.' e não com ','
+	    leitura.useLocale(Locale.US);            //Definindo o padrÃ£o de casa decimal como americano para ler com '.' e nÃ£o com ','
 	    
-	    System.out.println("Por favor, entre com o DRE e a média de cada aluno da disciplina.");
-	    System.out.println("Caso queira parar de inserir, digite uma média negativa.");
+	    System.out.println("Por favor, entre com o DRE e a mÃ©dia de cada aluno da disciplina.");
+	    System.out.println("Caso queira parar de inserir, digite uma mÃ©dia negativa.");
 	    
 	    dre = leitura.nextLong();
 	    media = leitura.nextFloat();
@@ -33,8 +33,8 @@ public class Principal{
 	    if(quant > 0){
 	        media = total/quant;
 	        
-	        System.out.println("Média da turma: " + media);
-	        System.out.println("DRE com maior média: " + maiorDRE);
+	        System.out.println("MÃ©dia da turma: " + media);
+	        System.out.println("DRE com maior mÃ©dia: " + maiorDRE);
 	    }
 	    
 	    leitura.close();
