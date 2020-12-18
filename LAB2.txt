@@ -1,0 +1,10 @@
+1) Crie um método público em ContaCorrente que permita o saque de um determinado valor.
+   Se não houver saldo suficiente para o valor desejado, o saque não deve ser efetuado.
+   Caso contrário, o saldo deverá ser diminuído de acordo com o valor sacado,
+   e uma entrada deve ser acrescentada no histórico de operações daquela conta.
+
+2) Escreva um unit test que verifique que o método de saque
+  (que você implementou no item anterior) está funcionando corretamente
+
+3) Faça o teste testarTransferecia() passar. (Este teste foi escrito no estilo TDD).
+   Em outras palavras, é preciso implementar o método transferir() na classe ContaCorrente.
