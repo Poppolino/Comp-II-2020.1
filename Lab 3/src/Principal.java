@@ -11,21 +11,21 @@ public class Principal {
 	
 	
 	public static void depositar(Scanner leitura){ 
-		System.out.println("\n- DEPÓSITO -");
-		System.out.println("Por favor, entre com o número da conta que deseja depositar, seguido do valor do depósito em reais:");
+		System.out.println("\n- DEPÃ“SITO -");
+		System.out.println("Por favor, entre com o nÃºmero da conta que deseja depositar, seguido do valor do depÃ³sito em reais:");
 		
 		long numeroConta = leitura.nextLong();
 		float valor = leitura.nextFloat();
 		
 		if(numeroConta <= 0 || numeroConta > contas.size()){
-			System.out.println("Número da conta inválido.\n");
+			System.out.println("NÃºmero da conta invÃ¡lido.\n");
 			return;
 		}
 		
 		ContaCorrente aux = (ContaCorrente)contas.get((int) numeroConta-1);
 		
 		if(!aux.depositar(valor)){
-			System.out.println("Não foi possível depositar o valor especificado.\n");
+			System.out.println("NÃ£o foi possÃ­vel depositar o valor especificado.\n");
 			return;
 		}
 		
@@ -35,20 +35,20 @@ public class Principal {
 	
 	public static void sacar(Scanner leitura){
 		System.out.println("\n- SAQUE -");
-		System.out.println("Por favor, entre com o número da conta que deseja sacar, seguido do valor do saque em reais:");
+		System.out.println("Por favor, entre com o nÃºmero da conta que deseja sacar, seguido do valor do saque em reais:");
 		
 		long numeroConta = leitura.nextLong();
 		float valor = leitura.nextFloat();
 		
 		if(numeroConta <= 0 || numeroConta > contas.size()){
-			System.out.println("Número da conta inválido.\n");
+			System.out.println("NÃºmero da conta invÃ¡lido.\n");
 			return;
 		}
 		
 		ContaCorrente aux = (ContaCorrente)contas.get((int) numeroConta-1);
 		
 		if(!aux.sacar(valor)){
-			System.out.println("Não foi possível sacar o valor especificado.\n");
+			System.out.println("NÃ£o foi possÃ­vel sacar o valor especificado.\n");
 			return;
 		}
 		
@@ -57,20 +57,20 @@ public class Principal {
 	
 	
 	public static void transferir(Scanner leitura){
-		System.out.println("\n- Transferência -");
-		System.out.println("Por favor, entre com o número da conta de origem, número da conta de destino e o valor da transferência em reais:");
+		System.out.println("\n- TransferÃªncia -");
+		System.out.println("Por favor, entre com o nÃºmero da conta de origem, nÃºmero da conta de destino e o valor da transferÃªncia em reais:");
 		
 		long numeroContaOrigem = leitura.nextLong();
 		long numeroContaDestino = leitura.nextLong();
 		float valor = leitura.nextFloat();
 		
 		if(numeroContaOrigem <= 0 || numeroContaOrigem > contas.size()){
-			System.out.println("Número da conta de origem é inválido.\n");
+			System.out.println("NÃºmero da conta de origem Ã© invÃ¡lido.\n");
 			return;
 		}
 		
 		if(numeroContaDestino <= 0 || numeroContaDestino > contas.size()){
-			System.out.println("Número da conta de destino é inválido.\n");
+			System.out.println("NÃºmero da conta de destino Ã© invÃ¡lido.\n");
 			return;
 		}
 		
@@ -78,7 +78,7 @@ public class Principal {
 		ContaCorrente destino = (ContaCorrente)contas.get((int) numeroContaDestino-1);
 		
 		if(!origem.transferir(valor, destino)){
-			System.out.println("Não foi possível realizar a transferência.\n");
+			System.out.println("NÃ£o foi possÃ­vel realizar a transferÃªncia.\n");
 			return;
 		}
 		
@@ -89,18 +89,18 @@ public class Principal {
 	
 	public static void consultarSaldo(Scanner leitura){
 		System.out.println("\n- SALDO -");
-		System.out.println("Por favor, entre com o número da conta que deseja consultar o saldo:");
+		System.out.println("Por favor, entre com o nÃºmero da conta que deseja consultar o saldo:");
 		
 		long numeroConta = leitura.nextLong();
 		
 		if(numeroConta <= 0 || numeroConta > contas.size()){
-			System.out.println("O número da conta é inválido.\n");
+			System.out.println("O nÃºmero da conta Ã© invÃ¡lido.\n");
 			return;
 		}
 		
 		ContaCorrente aux = (ContaCorrente)contas.get((int) numeroConta-1);
 		
-		System.out.printf("O saldo da conta escolhida é: R$%.2f\n\n", aux.getSaldoEmReais());
+		System.out.printf("O saldo da conta escolhida Ã©: R$%.2f\n\n", aux.getSaldoEmReais());
 	}
 	
 	
@@ -116,7 +116,7 @@ public class Principal {
 		Pessoa correntista = new Pessoa(nome, cpf);
 		
 		if(pessoas.contains(correntista)){
-			System.out.println("A pessoa escolhida já está cadastrada no sistema.\n");
+			System.out.println("A pessoa escolhida jÃ¡ estÃ¡ cadastrada no sistema.\n");
 			return;
 		}
 		
@@ -132,7 +132,7 @@ public class Principal {
 		long cpf = leitura.nextLong();
 		
 		if(!pessoas.contains(new Pessoa("checa", cpf))){
-			System.out.println("A pessoa escolhida ainda não está cadastrada no sistema.\n");
+			System.out.println("A pessoa escolhida ainda nÃ£o estÃ¡ cadastrada no sistema.\n");
 			return;
 		}
 		
@@ -142,20 +142,20 @@ public class Principal {
 		
 		contas.add(novaConta);
 		
-		System.out.println("Conta criada com sucesso!! Número da conta: " + novaConta.getNumeroDaConta() + "\n");
+		System.out.println("Conta criada com sucesso!! NÃºmero da conta: " + novaConta.getNumeroDaConta() + "\n");
 	}
 	
 	
 	
     public static void main(String[] args) {
     	Scanner leitura = new Scanner(System.in);
-    	leitura.useLocale(Locale.US);            //Definindo o padrão de casa decimal como americano para ler com '.' e não com ','
+    	leitura.useLocale(Locale.US);            //Definindo o padrÃ£o de casa decimal como americano para ler com '.' e nÃ£o com ','
     	String opcao;
     	
-    	System.out.println("Bem-vindo ao sistema da Agência Geral!!");
+    	System.out.println("Bem-vindo ao sistema da AgÃªncia Geral!!");
     	
     	while(true){
-    		System.out.println("\nPara realizar uma das operações a seguir, digite a letra correspondente:");
+    		System.out.println("\nPara realizar uma das operaÃ§Ãµes a seguir, digite a letra correspondente:");
     		System.out.println("(D)epositar");
     		System.out.println("(S)acar");
     		System.out.println("(T)ransferir");
@@ -163,7 +163,7 @@ public class Principal {
     		System.out.println("Cadastrar (P)essoa como correntista");
     		System.out.println("Criar (N)ova conta");
     		System.out.println("(X) para sair");
-    		System.out.println("\nOpção desejada:");
+    		System.out.println("\nOpÃ§Ã£o desejada:");
     		
     		opcao = leitura.nextLine();
     		
@@ -207,10 +207,10 @@ public class Principal {
     			break;
     		}
     		
-    		System.out.println("Opção inválida! Tente novamente.\n");
+    		System.out.println("OpÃ§Ã£o invÃ¡lida! Tente novamente.\n");
     	}
     	
-    	System.out.println("Agradecemos a preferência. Volte sempre!");
+    	System.out.println("Agradecemos a preferÃªncia. Volte sempre!");
     	leitura.close();
     }
 }
