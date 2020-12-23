@@ -30,7 +30,7 @@ public class Pessoa {
     @Override
     public boolean equals(Object o){
     	if(o == null || this.getClass() != o.getClass()){
-    		return false;
+            return false;
     	}
     	
     	Pessoa pessoa = (Pessoa) o;
