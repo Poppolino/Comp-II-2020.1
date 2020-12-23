@@ -29,7 +29,6 @@ public class ContaCorrente {
 
         totalDeContas++;
         this.numeroDaConta = totalDeContas;
-        historicoDeOperacoes.add("" + totalDeContas);
         
         this.correntista = correntista;
         this.agencia = agencia;
