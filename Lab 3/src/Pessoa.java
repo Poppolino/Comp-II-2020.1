@@ -4,7 +4,7 @@ public class Pessoa {
 
     private String nome;
 
-    private final long cpf;  // final indica que o campo JAMAIS poder· ser atualizado
+    private final long cpf;  // final indica que o campo JAMAIS poder√° ser atualizado
 
     private Date dataDeNascimento;
 
@@ -13,12 +13,12 @@ public class Pessoa {
     public Pessoa(String nomeDaPessoa, long cpfDaPessoa) {
         nome = nomeDaPessoa;
         cpf = cpfDaPessoa;
-        endereco = "EndereÁo desconhecido";
+        endereco = "Endere√ßo desconhecido";
     }
 
     public void setEndereco(String endereco) {
-        if (endereco.length() > 40) {  // tamanho m·ximo permitido para endereÁos
-            return;  // ToDo lanÁar exceÁ„o!
+        if (endereco.length() > 40) {  // tamanho m√°ximo permitido para endere√ßos
+            return;  // ToDo lan√ßar exce√ß√£o!
         }
         this.endereco = endereco;
     }
