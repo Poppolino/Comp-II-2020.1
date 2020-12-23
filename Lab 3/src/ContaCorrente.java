@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class ContaCorrente {
 
-    // o banco j· te d· algo como estÌmulo :-)
+    // o banco j√° te d√° algo como est√≠mulo :-)
     public static final float SALDO_INICIAL_DE_NOVAS_CONTAS = 10.0f;
     
     private static long totalDeContas; 
@@ -39,7 +39,7 @@ public class ContaCorrente {
         return numeroDaConta;
     }
 
-    public float getSaldoEmReais() {  // getter (mÈtodos de acesso para leitura)
+    public float getSaldoEmReais() {  // getter (m√©todos de acesso para leitura)
         return saldoEmReais;
     }
     
@@ -49,15 +49,15 @@ public class ContaCorrente {
 
     
     /**
-     * Realiza o depÛsito de um determinado valor na conta corrente  
+     * Realiza o dep√≥sito de um determinado valor na conta corrente  
      *
      * @param valor, o valor desejado
-     * @return true se consegue depositar, falso caso contr·rio
+     * @return true se consegue depositar, falso caso contr√°rio
      */
     public boolean depositar(float valor) {
-        // valida o par‚metro
+        // valida o par√¢metro
         if (valor <= 0) {
-            return false;  // ToDo lanÁar uma exceÁ„o!!!!
+            return false;  // ToDo lan√ßar uma exce√ß√£o!!!!
         }
 
         // altera o saldo
@@ -74,17 +74,17 @@ public class ContaCorrente {
      * Realiza o saque de um determinado valor na conta corrente  
      *
      * @param valor, o valor desejado
-     * @return true se consegue sacar, falso caso contr·rio
+     * @return true se consegue sacar, falso caso contr√°rio
      */
     public boolean sacar(float valor) {
-    	// valida o par‚metro
+    	// valida o par√¢metro
         if (valor <= 0) {
-            return false;  // ToDo lanÁar uma exceÁ„o!!!!
+            return false;  // ToDo lan√ßar uma exce√ß√£o!!!!
         }
 
-        // verifica se h· fundos na conta
+        // verifica se h√° fundos na conta
         if (valor > saldoEmReais) {
-            return false;  // ToDo lanÁar uma exceÁ„o!!!!
+            return false;  // ToDo lan√ßar uma exce√ß√£o!!!!
         }
 
         saldoEmReais -= valor;
@@ -104,28 +104,28 @@ public class ContaCorrente {
      *
      * @param valor, o valor desejado
      * @param contaDestino, a conta de destino
-     * @return true se consegue transferir, falso caso contr·rio
+     * @return true se consegue transferir, falso caso contr√°rio
      */
     public boolean transferir(float valor, ContaCorrente contaDestino) {
-    	// valida o par‚metro
+    	// valida o par√¢metro
         if (valor <= 0) {
-            return false;  // ToDo lanÁar uma exceÁ„o!!!!
+            return false;  // ToDo lan√ßar uma exce√ß√£o!!!!
         }
 
-        // verifica se h· fundos na conta
+        // verifica se h√° fundos na conta
         if (valor > saldoEmReais) {
-            return false;  // ToDo lanÁar uma exceÁ„o!!!!
+            return false;  // ToDo lan√ßar uma exce√ß√£o!!!!
         }
 
         saldoEmReais -= valor;
         contaDestino.saldoEmReais += valor;
 
         historicoDeOperacoes.add(String.format(
-                "TransferÍncia efetuada para a conta %d: R$%.2f na data %s",
+                "Transfer√™ncia efetuada para a conta %d: R$%.2f na data %s",
                 contaDestino.numeroDaConta, valor, new Date()));
 
         contaDestino.historicoDeOperacoes.add(String.format(
-                "TransferÍncia recebida da conta %d: R$%.2f na data %s",
+                "Transfer√™ncia recebida da conta %d: R$%.2f na data %s",
                 this.numeroDaConta, valor, new Date()));
     
         return true;
