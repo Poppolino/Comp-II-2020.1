@@ -1,0 +1,30 @@
+1) Modifique totalmente o main() da classe Principal de forma a interagir com o usuário.
+   Quando o programa iniciar, deverá imprimir no terminal um menu, por exemplo:
+   (D)epositar
+   (S)acar
+   (T)ransferir
+   (C)onsultar saldo
+   Cadastrar (P)essoa como correntista
+   Criar (N)ova conta
+   (X) para sair
+
+   Opção desejada:
+
+2) De acordo com a opção digitada pelo usuário, o programa deverá agir de acordo:
+
+   - para depositar, deverá pedir o número da conta de origem e o valor
+   - para sacar, idem
+   - para transferir, idem e também o número da conta de destino
+   - para cadastrar um correntista, deverá pedir os parâmetros requeridos pelo construtor de Pessoa
+   - para criar uma nova conta, deverá pedir os parâmetros requeridos pelo construtor de ContaCorrente,
+     e deverá retornar o número da conta recém-criada
+
+3) A agência será a mesma (uma agência padrão criada no começo do main()) para todas as contas
+
+4) Após cada ação, o programa deverá imprimir o item de histórico que foi acrescentado à(s) conta(s)
+   que foram modificada(s), e imprimir novamente o menu.
+
+5) Se o usuário digitar qualquer coisa que não seja a letra correspondente a uma opção válida
+   do menu, você deve mostrar uma msg de erro e reapresentar o menu.
+
+6) Faça passar o teste testarNumerosAutomaticosDeContas() sem mexer no teste absolutamente!
