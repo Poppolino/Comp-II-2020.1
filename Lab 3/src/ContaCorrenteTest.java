@@ -46,7 +46,7 @@ public class ContaCorrenteTest {
         assertFloatEquals(1510f, contaDaMaria.getSaldoEmReais());
 
         contaDaMaria.depositar(-100);
-        assertFloatEquals(1510f, contaDaMaria.getSaldoEmReais());  // nada mudou, porque o depÛsito n„o foi feito
+        assertFloatEquals(1510f, contaDaMaria.getSaldoEmReais());  // nada mudou, porque o dep√≥sito n√£o foi feito
    }
 
     @Test
@@ -65,7 +65,7 @@ public class ContaCorrenteTest {
 
     @Test
     public void testarTransferecia() {
-        // sanity check: as contas j· comeÁam com saldo 10 (regra de negÛcio)
+        // sanity check: as contas j√° come√ßam com saldo 10 (regra de neg√≥cio)
         checarSaldoInicial(contaDaMaria);
         checarSaldoInicial(contaDoJoao);
 
@@ -77,7 +77,7 @@ public class ContaCorrenteTest {
 
     @Test
     public void testarTransfereciaSemFundosNaContaDeOrigem() {
-    	// sanity check: as contas j· comeÁam com saldo 10 (regra de negÛcio)
+    	// sanity check: as contas j√° come√ßam com saldo 10 (regra de neg√≥cio)
         assertFloatEquals(10f, contaDaMaria.getSaldoEmReais());
         assertFloatEquals(10f, contaDoJoao.getSaldoEmReais());
 
@@ -85,11 +85,11 @@ public class ContaCorrenteTest {
 
         assertFloatEquals(10f, contaDaMaria.getSaldoEmReais());
         assertFloatEquals(10f, contaDoJoao.getSaldoEmReais());
-        // a transferÍncia N√O DEVE SER REALIZADA, porque n„o h· fundos na conta de origem (Maria).
+        // a transfer√™ncia N√ÉO DEVE SER REALIZADA, porque n√£o h√° fundos na conta de origem (Maria).
     }
 
     private void checarSaldoInicial(ContaCorrente conta) {
-    	// sanity check: as contas j· comeÁam com saldo 10 (regra de negÛcio)
+    	// sanity check: as contas j√° come√ßam com saldo 10 (regra de neg√≥cio)
         assertFloatEquals(
                 ContaCorrente.SALDO_INICIAL_DE_NOVAS_CONTAS,
                 conta.getSaldoEmReais());
