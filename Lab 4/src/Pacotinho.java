@@ -10,19 +10,19 @@ public class Pacotinho extends ArrayList<Figurinha> {
         adicionarFigurinhasAleatorias();
     }
 
-    // sobrecarga no costrutor, passando aqui as posiÁıes desejadas
+    // sobrecarga no costrutor, passando aqui as posi√ß√µes desejadas
     public Pacotinho(Album album, int[] posicoes) {
         this.album = album;
         int maxPosicao = album.getTamanho();
         int quantFigurinhasPorPacotinho = album.getQuantFigurinhasPorPacotinho();
         
-        if(posicoes.length != quantFigurinhasPorPacotinho){             // verifica se o tamanho do array est· correto
-           throw new RuntimeException("Pacotinho no tamanho errado!");
+        if(posicoes.length != quantFigurinhasPorPacotinho){             // verifica se o tamanho do array est√° correto
+            throw new RuntimeException("Pacotinho no tamanho errado!");
         }
         
         for(int i=0; i<posicoes.length; i++){
-            if(posicoes[i] < 1 || posicoes[i] > maxPosicao){           // verifica se a figurinha tem numeraÁ„o v·lida
-                throw new RuntimeException("O n˙mero " + posicoes[i] + " È inv·lido, n„o pode ser figurinha nesse ·lbum!");
+            if(posicoes[i] < 1 || posicoes[i] > maxPosicao){           // verifica se a figurinha tem numera√ß√£o v√°lida
+                throw new RuntimeException("O n√∫mero " + posicoes[i] + " √© inv√°lido, n√£o pode ser figurinha nesse √°lbum!");
             }
             
             Figurinha figurinha = new Figurinha(posicoes[i]);
@@ -32,7 +32,7 @@ public class Pacotinho extends ArrayList<Figurinha> {
 
     
     /**
-     * Gera figurinhas aleatÛrias que v„o compor o novo pacotinho
+     * Gera figurinhas aleat√≥rias que v√£o compor o novo pacotinho
      */
     private void adicionarFigurinhasAleatorias() {
         int maxPosicao = this.album.getTamanho();
@@ -40,7 +40,7 @@ public class Pacotinho extends ArrayList<Figurinha> {
         Random sorteia = new Random();
         
         for (int i = 1; i <= quantFigurinhasPorPacotinho; i++) {
-            int posicao = sorteia.nextInt(maxPosicao) + 1;            //sorteia uma posiÁ„o entre 1 e o tamanho do ·lbum
+            int posicao = sorteia.nextInt(maxPosicao) + 1;            //sorteia uma posi√ß√£o entre 1 e o tamanho do √°lbum
 
             Figurinha figurinha = new Figurinha(posicao);
             this.add(figurinha);                                      //Cria figurinha e adiciona ao pacotinho
@@ -49,7 +49,7 @@ public class Pacotinho extends ArrayList<Figurinha> {
 
     
     /**
-     * @return O ·lbum ao qual o pacotinho est· associado
+     * @return O √°lbum ao qual o pacotinho est√° associado
      */
     public Album getAlbum() {
         return this.album;
