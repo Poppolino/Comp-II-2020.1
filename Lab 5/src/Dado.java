@@ -5,7 +5,7 @@ public class Dado implements Sorteador {
     private static final Random SORTEIA = new Random();
     
     /**
-     * @return um número qualquer de 1 ao número total de FACES
+     * @return um nÃºmero qualquer de 1 ao nÃºmero total de FACES
      */
     public int sortear() {
         int numero = SORTEIA.nextInt(FACES) + 1;
