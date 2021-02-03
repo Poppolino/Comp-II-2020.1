@@ -1,0 +1,11 @@
+1) Terminar a implementação das classes MapaUsandoArrayUnico e
+   MapaUsandoArrayOrdenado (basta ver os ToDos que foram deixados)
+
+2) Escrever unit tests para estes métodos na classe MapaTest,
+   usando o mesmo esquema de testar para cada uma das implementações
+
+3) Ir no projeto Banco e usar HashMap para otimizar
+   a busca por correntistas dado o seu cpf.
+
+4) [OPCIONAL] No projeto Banco escreve um teste de performance
+   comparando as duas implementações.
