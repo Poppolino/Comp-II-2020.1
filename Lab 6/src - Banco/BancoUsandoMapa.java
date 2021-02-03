@@ -1,4 +1,3 @@
-package Banco;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,16 +17,16 @@ public class BancoUsandoMapa {
 
     public Pessoa cadastrarCorrentista(String nome, long cpf) {
         Pessoa p = new Pessoa(nome, cpf);
-        this.correntistas.put(cpf, p);    //Se existir, atualiza. Sen„o, cria um novo.
+        this.correntistas.put(cpf, p);    //Se existir, atualiza. Sen√£o, cria um novo.
         return p;
     }
 
     public ContaCorrente cadastrarConta(Pessoa correntista) {
         // verifica correntista
         if (localizarCorrentista(correntista.getCpf()) == null) {
-            // correntista n„o existe!!
-            // ToDo lanÁar uma exceÁ„o!
-            return null;  // n„o vou criar conta coisÌssima nenhuma!
+            // correntista n√£o existe!!
+            // ToDo lan√ßar uma exce√ß√£o!
+            return null;  // n√£o vou criar conta cois√≠ssima nenhuma!
         }
 
         // aceitamos mais de uma conta para o mesmo correntista
