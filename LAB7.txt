@@ -1,0 +1,26 @@
+1) Complete a funcionalidade do controle de estoque da loja. Isto é,
+
+i) quando receber o pedido de uma quantidade de certo item,
+é preciso verificar que existe aquela quantidade. Do contrário,
+não pode realizar a venda;
+
+ii) quando de fato vender uma quantidade de um item, é preciso abater
+aquela quantidade do estoque corrente da loja.
+
+Obs.: Para efeitos didáticos, não use o campo "id" que o Vendavel tem
+para ser a chave do mapa. Queremos que a chave seja o proprio Vendavel.
+
+2) Escreva unit tests que verifiquem o bom funcionamento do seu controle
+   de estoque. Nos testes, você deverá fazer pedidos de compras
+   usando sempre um NOVO objeto representando o item que deseja comprar.
+
+   Ou seja, por exemplo:
+
+   Livro livroDesejado = new Livro(............);
+
+   minhaLoja.receberPedido(livroDesejado, ..........);
+
+  Obs.: para isso funcionar, é claro que você precisará implementar
+  o equals e o hashCode dos seus objetos vendáveis.
+
+
