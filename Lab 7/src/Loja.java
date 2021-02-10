@@ -2,9 +2,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 
-/**
- * Loja virtual para a venda de livros (a princípio).
- */
+
 public class Loja {
 
     private static final int NUMERO_DE_PEDIDOS_POR_RELATORIO = 1;
