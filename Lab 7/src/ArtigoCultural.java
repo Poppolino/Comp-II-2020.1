@@ -31,7 +31,7 @@ public class ArtigoCultural implements Vendavel {
 
     public float getPrecoEmReais() {
         return precoEmReais;
-    }
+    } 
 
     public void setPrecoEmReais(float precoEmReais) {
         this.precoEmReais = precoEmReais;
