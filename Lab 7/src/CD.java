@@ -24,7 +24,7 @@ public class CD extends ArtigoCultural {
     }
 
     public String getArtista() {
-        return artista;
+        return artista; 
     }
 
     public void setArtista(String artista) {
