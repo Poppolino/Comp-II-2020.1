@@ -19,5 +19,5 @@ public interface Vendavel {
      * Além dos métodos acima, todo vendável precisa sobrescrever
      * o método equals e o hashCode de Object para que a busca por 
      * um objeto vendável numa estrutura de dados hash possa ocorrer. 
-     */
+     */ 
  }
