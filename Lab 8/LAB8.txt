@@ -1,0 +1,9 @@
+1) Termine de substituir os ToDos da classe ContaCorrente
+   por lançamentos de checked exceptions
+
+2) Verifique os chamadores dos métodos que você mexerá
+   para que ele se prepare para o caso em que tal ou qual checked
+   exception seja lançada
+
+3) Escreva unit tests para todas as situações excepcionais que
+   podem acontecer dentro da classe ContaCorrente
