@@ -1,0 +1,32 @@
+1) Inclua na classe Livro um atributo que dirá a categoria de cada
+   livro: Enciclopédia, Livro Didático, Ficção, Biografia,
+          Arte, Dicionário, Não-Ficção.
+
+   (este atributo deverá ser um enum criado por você)
+
+2) Na sua loja, coloque uma regra de negócio que é a seguinte:
+   na compra de três ou mais livros didáticos, você ganha um desconto
+   de 20%.
+
+   Dica: para verificar se o seu Vendável é de fato um Livro,
+
+3) Atribuir a cada valor do seu enum uma informação extra, que será
+   uma String representando a "abreviação" (ou "código") daquela
+   categoria, como se segue (respectivamente):
+   ENC, LD, FIC, BIO, AR, DIC, NF.
+
+4) Modifique o construtor de livro para receber também sua categoria
+   como parâmetro.
+
+5) Modifique o toString() da classe Livro para incluir a abreviação
+   da categoria do livro.
+
+6) Crie os métodos equals() e hashCode() em Livro utilizando,
+   como parâmetros de identificação, os atributos
+   - codigoISBN
+   - categoria (o atributo novo que vc está adicionando)
+
+
+
+
+
